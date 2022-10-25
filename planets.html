@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Planets | Anafro Planetary</title>
+</head>
+<body bgcolor="#000F38" text="#f0f8ff">
+<noscript>
+    <h3>Unfortunately, your browser does not support Javascript.</h3>
+    <p>To use this website, please, enable JavaScript in your browser's settings.</p>
+</noscript>
+<header>
+    <img src="assets/logo.svg" width="25" height="25">
+    <span>
+        <font face="'Gilroy Regular', sans-serif" size="5">Anafro</font>
+        <font face="'Gilroy Semibold', sans-serif" size="5">Planetarium</font>
+        <font face="'Gilroy Light', sans-serif" size="5" color="#00AFF8">/ Planet List</font>
+    </span>
+</header>
+<aside>
+    <table width="100%">
+        <tr align="center">
+            <td>
+                <a href="index.html">
+                    <font face="Gilroy" size=".5" color="#f0f8ff">
+                        🏠 Home
+                    </font>
+                </a>
+            </td>
+            <td>
+                <a href="about.html">
+                    <font face="Gilroy" size=".5" color="#f0f8ff">
+                        🤔 About Planetarium
+                    </font>
+                </a>
+            </td>
+            <td>
+                <a>
+                    <font face="'Gilroy Extrabold', sans-serif" size=".5" color="#f0f8ff">
+                        📝 Planet list
+                    </font>
+                </a>
+            </td>
+        </tr>
+    </table>
+    <hr size="1">
+</aside>
+<main>
+    <font face="Gilroy">
+        <h1>📝 Planet list</h1>
+        <table width="100%" border="1" bordercolor="white" cellpadding="10" cellspacing="0">
+            <thead>
+                <tr>
+                    <th>Planet name</th>
+                    <th>Distance to the Sun (au.)</th>
+                    <th>Inclination</th>
+                    <th>Year duration</th>
+                    <th>Day duration</th>
+                    <th>Is it a dwarf?</th>
+                </tr>
+            </thead>
+            <tr>
+                <td>Mercury</td>
+                <td>0.3</td>
+                <td>7.005&deg;</td>
+                <td>88 days</td>
+                <td>58.5 days</td>
+                <td>❌</td>
+            </tr>
+            <tr>
+                <td>Venus</td>
+                <td>0.7</td>
+                <td>3.86&deg;</td>
+                <td>225 days</td>
+                <td>117 days</td>
+                <td>❌</td>
+            </tr>
+            <tr>
+                <td>Earth</td>
+                <td>1</td>
+                <td>7.155&deg;</td>
+                <td>1 year</td>
+                <td>1 day</td>
+                <td>❌</td>
+            </tr>
+            <tr>
+                <td>Mars</td>
+                <td>1.52</td>
+                <td>25&deg;</td>
+                <td>687 days</td>
+                <td>24.5 hours</td>
+                <td>❌</td>
+            </tr>
+            <tr>
+                <td>Ceres</td>
+                <td>2.77</td>
+                <td>9.65&deg;</td>
+                <td>4.6 years</td>
+                <td>9 hours</td>
+                <td>✅</td>
+            </tr>
+            <tr>
+                <td>Jupiter</td>
+                <td>6.46</td>
+                <td>3&deg;</td>
+                <td>12 years</td>
+                <td>10 hours</td>
+                <td>❌</td>
+            </tr>
+            <tr>
+                <td>Saturn</td>
+                <td>9.58</td>
+                <td>26.73&deg;</td>
+                <td>30 years</td>
+                <td>10.5 hours</td>
+                <td>❌</td>
+            </tr>
+            <tr>
+                <td>Uranus</td>
+                <td>19.19</td>
+                <td>93&deg;</td>
+                <td>84 years</td>
+                <td>17 hours</td>
+                <td>❌</td>
+            </tr>
+            <tr>
+                <td>Neptune</td>
+                <td>30.1</td>
+                <td>28&deg;</td>
+                <td>165 years</td>
+                <td>16 hours</td>
+                <td>❌</td>
+            </tr>
+            <tr>
+                <td>Pluto</td>
+                <td>49.3</td>
+                <td>57&deg;</td>
+                <td>248 years</td>
+                <td>153 hours</td>
+                <td>✅</td>
+            </tr>
+            <tr>
+                <td>Eris</td>
+                <td>68</td>
+                <td>78&deg;</td>
+                <td>559 years</td>
+                <td>26 hours</td>
+                <td>✅</td>
+            </tr>
+            <tr>
+                <td>Haumea</td>
+                <td>43</td>
+                <td>28&deg;</td>
+                <td>289 years</td>
+                <td>4 hours</td>
+                <td>✅</td>
+            </tr>
+            <tr>
+                <td>Makemake</td>
+                <td>45.8</td>
+                <td>29&deg;</td>
+                <td>306 years</td>
+                <td>22.5 hours</td>
+                <td>✅</td>
+            </tr>
+            <tr>
+                <td>Gonggong</td>
+                <td>89</td>
+                <td>30&deg;</td>
+                <td>554 years</td>
+                <td>45 hours</td>
+                <td>✅</td>
+            </tr>
+        </table>
+        <br>
+        <h1>🔎 Filters</h1>
+        <form>
+            <input id="min-distance" type="range" min="0" max="89">
+            <label for="min-distance">Min distance</label>
+            <br>
+            <input id="max-distance" type="range" min="0" max="89">
+            <label for="max-distance">Max distance</label>
+            <br>
+
+            <input id="min-inclination" type="range" min="0" max="93">
+            <label for="min-inclination">Min inclination</label>
+            <br>
+            <input id="max-inclination" type="range" min="0" max="93">
+            <label for="max-inclination">Max inclination</label>
+            <br>
+
+            <input id="min-year-duration" type="range" min="0" max="554">
+            <label for="min-year-duration">Min year duration</label>
+            <br>
+            <input id="max-year-duration" type="range" min="0" max="554">
+            <label for="max-year-duration">Max year duration</label>
+            <br>
+
+            <input id="min-day-duration" type="range" min="0" max="177">
+            <label for="min-day-duration">Min day duration</label>
+            <br>
+            <input id="max-day-duration" type="range" min="0" max="177">
+            <label for="max-day-duration">Max day duration</label>
+            <br>
+        </form>
+    </font>
+</main>
+<footer>
+    <br>
+    <hr size="1">
+    <font face="Gilroy" size=".5">
+        <span>&copy; Anafro Planetarium 2022. All rights reserved</span>
+    </font>
+</footer>
+</body>
+</html>
