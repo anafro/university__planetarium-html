@@ -1,0 +1,190 @@
+$font:"Gilroy", sans-serif
+$background: #000F38
+$foreground: #F0F8FF
+$primary: #00DBFF
+$title-emoji-translation-amplitude: 5px
+$title-emoji-rotation-amplitude: 10deg
+
+*
+  margin: 0
+  padding: 0
+  font-family: $font
+
+a
+  color: $foreground
+  text-decoration: unset
+  user-select: none
+
+  &:visited, &:active
+    color: $foreground
+    text-decoration: unset
+    user-select: none
+
+abbr
+  cursor: help
+
+header
+  display: flex
+  flex-direction: column
+  gap: 5px
+  padding: 0.5em 0
+
+body
+  background-color: $background
+  color: $foreground
+  font-size: 125%
+  overflow-x: hidden
+
+#app-container
+  display: flex
+  justify-content: center
+  width: 100vw
+
+#app
+  max-width: 70vw
+
+#logo
+  display: flex
+  gap: 1em
+  align-items: center
+
+#logo-title
+  font-size: 1.25em
+
+#logo-image
+  width: 2em
+  height: 2em
+
+#logo-title-regular
+  font-weight: 400
+
+#logo-title-bold
+  font-weight: 800
+
+nav
+  display: flex
+  align-items: center
+  justify-content: space-around
+
+.nav-option
+  color: white
+
+  &.selected
+    font-weight: 800
+    cursor: not-allowed
+
+#banner
+  width: 100%
+
+@keyframes title-emoji-floating
+  from
+    transform: translateY(0px) rotate(0deg)
+
+  25%
+    transform: translateY($title-emoji-translation-amplitude) rotate($title-emoji-rotation-amplitude / 2)
+
+  75%
+    transform: translateY(0px) rotate(0deg) scale(1.2)
+
+  to
+    transform: translateY(-$title-emoji-translation-amplitude) rotate(-$title-emoji-rotation-amplitude / 2)
+
+#title-emoji
+  display: inline-block
+  animation: title-emoji-floating 10s infinite alternate ease-in-out
+
+#title
+  font-size: 2em
+
+#subtitle
+  margin-top: 0.5em
+
+main
+  display: flex
+  flex-direction: column
+  gap: 3em
+  align-items: center
+  justify-content: center
+
+article
+  width: 100%
+
+#planet-gallery
+  display: flex
+  align-items: center
+  flex-wrap: wrap
+  justify-content: space-between
+  margin-top: 0.5em
+
+.planet-gallery-item-image
+  width: 100px
+  height: 100px
+
+.planet-gallery-item-caption
+  width: 100%
+  text-align: center
+  font-style: italic
+
+form
+  width: 50%
+
+#question-form-submission-button
+  background: $primary
+  color: $background
+  font-size: 0.75em
+  padding: 0.5em 1.5em
+  border-radius: 7px
+  text-transform: uppercase
+  font-weight: 800
+  margin-top: 1em
+
+footer
+  margin-top: 2em
+
+input
+  width: 100%
+  display: inline-block
+  font-family: $font
+  font-size: 1em
+  background: $background
+  color: $foreground
+  padding: 0.4em 0.8em
+  outline: none
+  border-radius: 5px
+  border: #FFFFFF77 1px solid
+  margin-top: 0.5em
+
+  &::placeholder
+    color: #FFFFFF77
+
+#object-table
+  table-layout: fixed
+  padding: 0
+  border: 0
+  border-collapse: collapse
+  *
+    border: none
+
+  td
+    padding: 0.75em 0.25em
+
+  tr:nth-of-type(2n)
+    background: #FFFFFF11
+
+
+/* Small devices
+@media only screen and (max-width: 600px)
+  #app
+    max-width: 95vw
+
+
+/* Medium devices
+@media only screen and (min-width: 600px) and (max-width: 1200px)
+  #app
+    max-width: 80vw
+
+
+/* Both small and medium devices
+@media only screen and (max-width: 1200px)
+  #banner
+    display: none

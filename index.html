@@ -2,132 +2,119 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="styles/stylesheet.css">
     <title>Home | Anafro Planetary</title>
 </head>
-<body bgcolor="#000F38" text="#f0f8ff">
-<noscript>
-    <h3>Unfortunately, your browser does not support Javascript.</h3>
-    <p>To use this website, please, enable JavaScript in your browser's settings.</p>
-</noscript>
-<header>
-    <img src="assets/logo.svg" width="25" height="25">
-    <span><font face="'Gilroy Regular', sans-serif" size="5">Anafro</font> <font face="'Gilroy Semibold', sans-serif" size="5">Planetarium</font></span>
-</header>
-<aside>
-    <table width="100%">
-        <tr align="center">
-            <td>
-                <a>
-                    <font face="'Gilroy Extrabold', sans-serif" size=".5" color="#f0f8ff">
-                        🏠 Home
-                    </font>
+<body>
+    <div id="app-container">
+        <div id="app">
+            <noscript>
+                <h3>Unfortunately, your browser does not support Javascript.</h3>
+                <p>To use this website, please, enable JavaScript in your browser's settings.</p>
+            </noscript>
+            <header>
+                <div id="logo">
+                    <img id="logo-image" src="assets/logo.svg" alt="Planetarium Logo">
+                    <span id="logo-title">
+                        <span id="logo-title-regular">Anafro</span>
+                        <span id="logo-title-bold">Planetarium</span>
+                    </span>
+                </div>
+            </header>
+            <nav>
+                <a class="nav-option selected">
+                    🏠 Home
                 </a>
-            </td>
-            <td>
-                <a href="about.html">
-                    <font face="Gilroy" size=".5" color="#f0f8ff">
-                        🤔 About Planetarium
-                    </font>
+                <a class="nav-option" href="about.html">
+                    🤔 About Planetarium
                 </a>
-            </td>
-            <td>
-                <a href="planets.html">
-                    <font face="Gilroy" size=".5" color="#f0f8ff">
-                        📝 Object list
-                    </font>
+                <a class="nav-option" href="planets.html">
+                    📝 Object list
                 </a>
-            </td>
-        </tr>
-    </table>
-    <hr size="1">
-</aside>
-<main>
-    <img src="assets/banner.svg">
-    <font face="Gilroy">
-        <h1><font size="12">🪐 Your beautiful <abbr title="🪐 It's a place to watch planets at :]">planetarium</abbr>.</font></h1>
-        <p>
-            Explore our beautiful Solar system full of
+            </nav>
+            <main>
+                <article>
+                    <img id="banner" src="assets/banner.svg">
+                    <h1 id="title">
+                        <span id="title-emoji">🪐</span>
+                        Your beautiful
+                        <abbr title="🪐 It's a place to watch planets at :]">planetarium.</abbr>
+                    </h1>
+                    <p id="subtitle">
+                        Explore our beautiful Solar system full of gorgeous objects. Trust me, there's so much to see!
+                    </p>
+                </article>
 
-            <ruby>
-                <strike>interesting</strike>
-                <rt>
-                    <font size="2">gorgeous</font>
-                </rt>
-            </ruby>
+                <article>
+                    <h2 id="objects-article-title">What do we have here?</h2>
+                    <ol type="A">
+                        <li>🪐 Planets</li>
+                        <li>☄️ Asteroids</li>
+                        <li>🌚 Satellites</li>
+                        <span>...and more!</span>
+                    </ol>
+                    <br>
+                </article>
 
-            objects. Trust me, there's so much to see!
-        </p>
-        <br>
-        <hr size="1">
-        <br>
+                <article>
+                    <h2 id="planets-article-title">You're going to see these awesome planets:</h2>
+                    <div id="planet-gallery">
+                        <figure class="planet-gallery-item">
+                            <img class="planet-gallery-item-image" src="assets/planets/jupiter.png">
+                            <figcaption class="planet-gallery-item-caption">Jupiter</figcaption>
+                        </figure>
 
-        <h2>What do we have here?</h2>
-        <ol type="A">
-            <li>🪐 Planets</li>
-            <li>☄️ Asteroids</li>
-            <li>🌚 Satellites</li>
-            <span>...and more!</span>
-        </ol>
-        <br>
-        <hr size="1">
-        <br>
+                        <figure class="planet-gallery-item">
+                            <img class="planet-gallery-item-image" src="assets/planets/mars.png">
+                            <figcaption class="planet-gallery-item-caption">Mars</figcaption>
+                        </figure>
 
-        <h2>You're going to see these awesome planets:</h2>
-        <figure>
-            <img src="assets/planets/jupiter.png" width="100" height="100">
-            <figcaption>Jupiter</figcaption>
-        </figure>
-        <figure>
-            <img src="assets/planets/mars.png" width="100" height="100">
-            <figcaption>Mars</figcaption>
-        </figure>
-        <figure>
-            <img src="assets/planets/earth.png" width="100" height="100">
-            <figcaption>Earth</figcaption>
-        </figure>
-        <figure>
-            <img src="assets/planets/uranus.png" width="100" height="100">
-            <figcaption>Uranus</figcaption>
-        </figure>
-        <figure>
-            <img src="assets/planets/pluto.png" width="100" height="100">
-            <figcaption>Pluto</figcaption>
-        </figure>
-        <br>
-        <hr size="1">
-        <br>
+                        <figure class="planet-gallery-item">
+                            <img class="planet-gallery-item-image" src="assets/planets/earth.png">
+                            <figcaption class="planet-gallery-item-caption">Earth</figcaption>
+                        </figure>
 
-        <h2>An important message</h2>
-        <details open>
-            <summary>
-                Spoiler alert!
-            </summary>
+                        <figure class="planet-gallery-item">
+                            <img class="planet-gallery-item-image" src="assets/planets/uranus.png">
+                            <figcaption class="planet-gallery-item-caption">Uranus</figcaption>
+                        </figure>
 
-            <figure>
-                <blockquote>
-                    <p>You'll be really surprised how cool our solar system is! 💙 :]</p>
-                </blockquote>
-                <figcaption>- &copy; Anatoly Frolov, <cite>Creator of Anafro Planetarium</cite></figcaption>
-            </figure>
-        </details>
-        <br>
-        <hr size="1">
-        <br>
+                        <figure class="planet-gallery-item">
+                            <img class="planet-gallery-item-image" src="assets/planets/pluto.png">
+                            <figcaption class="planet-gallery-item-caption">Pluto</figcaption>
+                        </figure>
+                    </div>
+                </article>
 
-        <h2>Got a question?</h2>
-        <form>
-            <input placeholder="Your name"><br>
-            <input placeholder="Your message" type="text"><br>
-            <button type="submit">Send a message</button>
-        </form>
-    </font>
-</main>
-<footer>
-    <br>
-    <hr size="1">
-    <font face="Gilroy" size=".5">
-        <span>&copy; Anafro Planetarium 2022. All rights reserved</span>
-    </font>
-</footer>
+                <article>
+                    <h2 id="spoiler-article-title">An important message</h2>
+                    <details open>
+                        <summary>
+                            Spoiler alert!
+                        </summary>
+
+                        <figure>
+                            <blockquote>
+                                <p>You'll be really surprised how cool our solar system is! 💙 :]</p>
+                            </blockquote>
+                            <figcaption>- &copy; Anatoly Frolov, <cite>Creator of Anafro Planetarium</cite></figcaption>
+                        </figure>
+                    </details>
+                </article>
+
+                <article>
+                    <h2 id="question-article-title">Got a question?</h2>
+                    <form id="question-form">
+                        <input id="question-form-name" placeholder="Your name"><br>
+                        <input id="question-form-message" placeholder="Your message" type="text">
+                        <button id="question-form-submission-button" type="submit">Send a message</button>
+                    </form>
+                </article>
+            </main>
+            <footer>
+                <span>&copy; Anafro Planetarium 2022. All rights reserved</span>
+            </footer>
+        </div>
+    </div>
 </body>
 </html>
