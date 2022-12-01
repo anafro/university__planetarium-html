@@ -37,12 +37,12 @@
                 <table id="object-table">
                     <thead>
                     <tr>
-                        <th>Planet name</th>
-                        <th>Distance to the Sun (au.)</th>
-                        <th>Inclination</th>
-                        <th>Year duration</th>
-                        <th>Day duration</th>
-                        <th>Type</th>
+                        <th id="object-table-name"></th>
+                        <th id="object-table-distance"></th>
+                        <th id="object-table-inclination"></th>
+                        <th id="object-table-year-duration"></th>
+                        <th id="object-table-day-duration"></th>
+                        <th id="object-table-type"></th>
                     </tr>
                     </thead>
                     <tr>
@@ -799,35 +799,70 @@
                     </tr>
                 </table>
 
+                <h1>📊 Diagram</h1>
+                <div id="diagram-container">
+                    <div id="diagram-axis-selections-container">
+                        <div class="diagram-axis-selection" id="diagram-x-selection">
+                            <p class="diagram-axis-selection-title">For X-axis</p>
+                            <div class="diagram-axis-selector">
+                                <input type="checkbox" name="diagram-earth-group" id="diagram-earth-group">
+                                <label for="diagram-earth-group">Earth group planets</label>
+                            </div>
+
+                            <div class="diagram-axis-selector">
+                                <input type="checkbox" name="diagram-gas-giants" id="diagram-gas-giants">
+                                <label for="diagram-gas-giants">Gas giants</label>
+                            </div>
+
+                            <div class="diagram-axis-selector">
+                                <input type="checkbox" name="" id="diagram-dwarfs">
+                                <label for="diagram-dwarfs">Dwarfs</label>
+                            </div>
+                        </div>
+
+                        <div class="diagram-axis-selection" id="diagram-y-selection">
+                            <p class="diagram-axis-selection-title">For Y-axis</p>
+
+                            <div class="diagram-axis-selector">
+                                <input type="checkbox" name="diagram-earth" id="diagram-max-distance">
+                                <label for="diagram-max-distance">Max distance from the Sun</label>
+                            </div>
+
+                            <div class="diagram-axis-selector">
+                                <input type="checkbox" name="diagram-min-distance" id="diagram-min-distance">
+                                <label for="diagram-min-distance">Min distance from the Sun</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button id="make-diagram-button">Create a diagram</button>
+                </div>
+
                 <h1>🔎 Filters</h1>
-                <form>
-                    <input id="min-distance" type="range" min="0" max="89">
+                <form id="filter-form">
                     <label for="min-distance">Min distance</label>
-                    <br>
-                    <input id="max-distance" type="range" min="0" max="89">
+                    <input id="min-distance" type="range" min="0" max="89">
+
                     <label for="max-distance">Max distance</label>
-                    <br>
+                    <input id="max-distance" type="range" min="0" max="89">
 
-                    <input id="min-inclination" type="range" min="0" max="180">
                     <label for="min-inclination">Min inclination</label>
-                    <br>
-                    <input id="max-inclination" type="range" min="0" max="180">
+                    <input id="min-inclination" type="range" min="0" max="180">
+
                     <label for="max-inclination">Max inclination</label>
-                    <br>
+                    <input id="max-inclination" type="range" min="0" max="180">
 
-                    <input id="min-year-duration" type="range" min="0" max="554">
                     <label for="min-year-duration">Min year duration</label>
-                    <br>
-                    <input id="max-year-duration" type="range" min="0" max="554">
-                    <label for="max-year-duration">Max year duration</label>
-                    <br>
+                    <input id="min-year-duration" type="range" min="0" max="554">
 
-                    <input id="min-day-duration" type="range" min="0" max="177">
+                    <label for="max-year-duration">Max year duration</label>
+                    <input id="max-year-duration" type="range" min="0" max="554">
+
                     <label for="min-day-duration">Min day duration</label>
-                    <br>
-                    <input id="max-day-duration" type="range" min="0" max="177">
+                    <input id="min-day-duration" type="range" min="0" max="177">
+
                     <label for="max-day-duration">Max day duration</label>
-                    <br>
+                    <input id="max-day-duration" type="range" min="0" max="177">
                 </form>
             </main>
 

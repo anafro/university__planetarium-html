@@ -40,7 +40,7 @@ body {
 }
 
 #app {
-  max-width: 70vw;
+  width: 70vw;
 }
 
 #logo {
@@ -125,9 +125,9 @@ article {
 
 #planet-gallery {
   display: flex;
-  align-items: center;
   flex-wrap: wrap;
   justify-content: space-between;
+  align-items: flex-start;
   margin-top: 0.5em;
 }
 
@@ -146,7 +146,7 @@ form {
   width: 50%;
 }
 
-#question-form-submission-button {
+button {
   background: #00DBFF;
   color: #000F38;
   font-size: 0.75em;
@@ -155,6 +155,34 @@ form {
   text-transform: uppercase;
   font-weight: 800;
   margin-top: 1em;
+}
+
+#diagram-container {
+  display: flex;
+  flex-direction: column;
+}
+#diagram-container #diagram-axis-selections-container {
+  display: flex;
+  gap: 2em;
+}
+#diagram-container #diagram-axis-selections-container .diagram-axis-selection {
+  display: flex;
+  flex-direction: column;
+}
+#diagram-container #diagram-axis-selections-container .diagram-axis-selection .diagram-axis-selector {
+  display: flex;
+  align-items: center;
+}
+#diagram-container #diagram-axis-selections-container .diagram-axis-selection .diagram-axis-selector input[type=checkbox] {
+  width: 1em;
+  height: auto;
+  margin-top: 0;
+  margin-right: 10px;
+}
+
+.diagram-description-line {
+  opacity: 0.3;
+  font-style: italic;
 }
 
 footer {
@@ -183,6 +211,7 @@ input::placeholder {
   padding: 0;
   border: 0;
   border-collapse: collapse;
+  width: 100%;
 }
 #object-table * {
   border: none;
@@ -194,10 +223,55 @@ input::placeholder {
   background: rgba(255, 255, 255, 0.0666666667);
 }
 
+#filter-form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+#filter-form input[type=range] {
+  margin-bottom: 1.5em;
+}
+
+#object-table-name::before {
+  content: "Object name";
+}
+
+#object-table-distance::before {
+  content: "Distance to the Sun (au.)";
+}
+
+#object-table-inclination::before {
+  content: "Inclination";
+}
+
+#object-table-year-duration::before {
+  content: "Year duration";
+}
+
+#object-table-day-duration::before {
+  content: "Day duration";
+}
+
+#object-table-type::before {
+  content: "Type";
+}
+
 /* Small devices */
 @media only screen and (max-width: 600px) {
   #app {
     max-width: 95vw;
+  }
+}
+@media only screen and (max-width: 800px) {
+  .planet-gallery-item:nth-child(n+4) {
+    display: none;
+  }
+  nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
   }
 }
 /* Medium devices */
@@ -210,6 +284,53 @@ input::placeholder {
 @media only screen and (max-width: 1200px) {
   #banner {
     display: none;
+  }
+  #object-table {
+    font-size: 0.8em;
+  }
+  h1 {
+    font-size: 1.75em;
+    margin-top: 2em;
+  }
+  #object-table-name::before {
+    content: "Name";
+  }
+  #object-table-distance::before {
+    content: "Distance";
+  }
+  #object-table-inclination::before {
+    content: "Incl.";
+  }
+  #object-table-year-duration::before {
+    content: "Year dur.";
+  }
+  #object-table-day-duration::before {
+    content: "Year dur.";
+  }
+  #object-table th:last-child, td:last-child {
+    display: none;
+  }
+  main {
+    gap: 1.5em;
+  }
+  #title {
+    font-size: 1.5em;
+  }
+  #question-form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  #question-form input {
+    font-size: 0.9em;
+  }
+  #question-form * {
+    max-width: 100%;
+    padding: 0.5em 0;
+    margin-bottom: 0.5em;
+  }
+  #question-form > *:last-child {
+    margin-top: 1em;
   }
 }
 
